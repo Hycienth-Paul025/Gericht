@@ -1,0 +1,1356 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+
+@import url("https://fonts.cdnfonts.com/css/bestermind");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --first-font: "Cormorant Upright";
+  --second-font: "open sans";
+  --third-font: "Bestermind", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0c0b08;
+  color: #ddd;
+  font-family: "open sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  gap: 10rem;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  background: #0c0b08;
+  z-index: 6;
+}
+
+.logo {
+  font-size: 35px;
+  font-family: "cormorant Uprigh";
+  text-transform: uppercase;
+  letter-spacing: 1.76px;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10rem;
+  align-items: center;
+}
+
+.left-navbar {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.left-navbar ul {
+  display: inline-flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.right-navbar {
+  position: relative;
+  display: inline-block;
+}
+
+.right-navbar .login {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.right-navbar .login-box {
+  width: 200px;
+  padding: 0.4rem;
+  border-radius: 20px;
+  background: #0c0c0c;
+  position: absolute;
+  right: -84px;
+  box-shadow: 1px -1px 10px #464545e8;
+  display: none;
+}
+
+.right-navbar li:hover .login-box{
+  display: block;
+}
+
+.login-box li {
+  margin: 4px 0;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.login-box li:hover {
+  background: #ddd;
+  color: #333;
+}
+
+/* show login bar */
+  .show-login {
+    display: block;
+  }
+
+.left-navbar ul li,
+.login-box li {
+  cursor: pointer;
+  transition: color 0.3s, background 0.5s;
+}
+
+.left-navbar ul li:hover {
+  color: #aaa;
+}
+
+.hamburger,
+.close {
+  font-size: 2rem;
+  display: none;
+}
+
+/* open Navbar */
+.navActive {
+  right: 0;
+}
+
+/* HOME SECTION */
+
+.home-container {
+  margin: 70px 50px;
+}
+
+section.home {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.home-text-container {
+  padding: 0 2rem;
+  width: 40%;
+}
+
+.home-text-container .home-text {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.home-text-container svg {
+  display: block;
+  width: 32px;
+  height: 40px;
+}
+
+.home-text-container h1 {
+  color: #dcca87;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: 3.6px;
+  text-transform: capitalize;
+  font-family: "Cormorant Upright", sans-serif;
+}
+
+.home-text-container small {
+  display: inline-block;
+  font-size: 15px;
+  color: #aaa;
+  text-align: justify;
+  letter-spacing: 0.64px;
+}
+
+.home-text-container button {
+  padding: 8px 32px;
+  align-items: center;
+  font-weight: bolder;
+  color: #0c0b08;
+  font-family: "Cormorant Upright";
+  letter-spacing: 1.7px;
+  border: none;
+  cursor: pointer;
+  background: #dcca87;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.home-text-container button:hover {
+  background: #eed77c;
+}
+
+.sidebar-container {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: -5rem;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+}
+
+.image-container {
+  width: 50%;
+  height: auto;
+  padding: 30px;
+}
+
+.bg-image {
+  position: relative;
+}
+
+.bg-image::before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background: #dcca87;
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+}
+
+.bg-image::after {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background: #dcca87;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+.bg-image img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.scroll-section {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #dcca87;
+}
+
+.scroll-section svg {
+  padding-bottom: 2rem;
+}
+
+.numbers-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rem;
+  font-family: var(--second-font);
+  font-weight: 400;
+}
+
+/* About Section */
+
+section.about {
+  background-image: url("../img/malik-skydsgaard.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about .great {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  top: 35rem;
+}
+
+.about-text-container {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  padding: 0 5rem 10rem;
+}
+
+.left-about-text {
+  display: block;
+  gap: 1.5rem;
+}
+
+.left-about-text h1 {
+  display: block;
+  font-size: 68px;
+  font-weight: 600;
+  font-family: "Cormorant Upright";
+  color: #dcca87;
+  text-align: right;
+}
+
+.left-about-text svg {
+  display: block;
+  float: right;
+}
+
+.left-about-text p {
+  text-align: right;
+  font-size: 14px;
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+.left-about-text button {
+  display: flex;
+  justify-self: flex-end;
+  padding: 8px 32px;
+  background: #dcca87;
+  color: #0c0b08;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: none;
+  font-family: "Cormorant Upright";
+  cursor: pointer;
+}
+
+.mid-about-container {
+  display: flex;
+}
+
+.about-image {
+  max-width: fit-content;
+}
+
+.about-image img {
+  width: fit-content;
+}
+
+.right-about-text {
+  display: block;
+  gap: 1.5rem;
+}
+
+.right-about-text h1 {
+  display: block;
+  font-size: 68px;
+  font-weight: 600;
+  font-family: "Cormorant Upright";
+  color: #dcca87;
+}
+
+.right-about-text svg {
+  display: block;
+}
+
+.right-about-text p {
+  text-align: left;
+  font-size: 14px;
+  display: inline-block;
+  padding: 1rem 0;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.right-about-text button {
+  display: flex;
+  justify-self: flex-start;
+  padding: 8px 32px;
+  background: #dcca87;
+  color: #0c0b08;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: none;
+  font-family: "Cormorant Upright";
+  cursor: pointer;
+}
+
+.left-about-text button,
+.right-about-text button {
+  transition: background 0.3s;
+}
+
+.left-about-text button:hover,
+.right-about-text button:hover {
+  background: #eed77c;
+}
+
+/* SPECIAL CONTAINER */
+
+.special-container {
+  width: 100%;
+  padding: 5.5rem;
+}
+
+.special-heading {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.special-heading {
+  font-family: var(--first-font);
+}
+
+.special-heading span {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  margin: 0 auto;
+}
+
+.special-heading svg {
+  width: 30px;
+  margin: 0.5rem auto;
+}
+
+.special-heading h1 {
+  text-transform: capitalize;
+  font-size: 6rem;
+  color: #dcca87;
+  text-align: center;
+}
+
+.special-drink-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+/* 
+.left-special-container,
+.mid-special-container,
+.right-special-container {
+  background: red;
+} */
+
+.right-special-container {
+  justify-self: center;
+}
+
+.left-special-container h2 {
+  text-align: center;
+  font-family: var(--first-font);
+  font-size: 40px;
+  text-transform: capitalize;
+  padding-top: 2rem;
+}
+
+.wine-beer-container {
+  padding: 40px 0;
+}
+
+.wine-beer-container span {
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.drinks-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.drinks-details .drink-name {
+  font-size: 14px;
+  color: #dcca87;
+  font-family: var(--first-font);
+  font-weight: 500;
+  text-transform: capitalize;
+  width: 100px;
+}
+
+.drinks-details svg {
+  padding-left: 32px;
+}
+
+.drinks-details .drink-price {
+  font-size: 15px;
+  font-family: var(--second-font);
+}
+
+.right-special-container h2 {
+  text-align: center;
+  font-family: var(--first-font);
+  font-size: 40px;
+  text-transform: capitalize;
+  padding-top: 2rem;
+}
+
+.cocktail-container {
+  padding: 35px 0;
+}
+
+.cocktail-container span {
+  font-size: 13px;
+}
+
+.chef-container {
+  width: 100%;
+  max-width: 100%;
+  background: no-repeat center url(../img/malik-skydsgaard.jpg);
+  background-size: cover;
+}
+
+.chef {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  max-width: 100vw;
+  padding: 10rem 7rem;
+}
+
+.chef-image {
+  position: relative;
+}
+
+.chef-image::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 400px;
+  height: 400px;
+  background: #dcca87;
+}
+
+.chef-image::after {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  bottom: -1rem;
+  width: 400px;
+  height: 400px;
+  background: #dcca87;
+}
+
+.chef-image img {
+  width: 500px;
+  position: relative;
+  z-index: 3;
+}
+
+.chef-container {
+  flex-wrap: wrap;
+}
+
+.chef-text-container {
+  flex-wrap: wrap;
+}
+.chef-text-container span {
+  display: block;
+  font: 15px var(--first-font);
+  text-transform: capitalize;
+}
+
+.chef-text-container .chef-heading {
+  font-family: var(--first-font);
+  color: #dcca87;
+  font-size: 60px;
+  text-transform: capitalize;
+  padding-top: 10px;
+  padding-bottom: 4.5rem;
+}
+
+.chef-text {
+  font-style: italic;
+  font-size: 14px;
+  font-family: var(--second-font);
+  line-height: 20px;
+  padding-bottom: 5rem;
+}
+
+.chef-text svg {
+  padding-right: 0.5rem;
+}
+
+.founder-section h2 {
+  font-size: 32px;
+  text-transform: capitalize;
+  font-family: var(--first-font);
+  color: #dcca87;
+}
+
+.founder-section p {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-weight: 500;
+  padding-bottom: 3rem;
+}
+
+.signature p {
+  font-size: 40px;
+  text-transform: capitalize;
+  font-family: var(--third-font);
+  font-weight: 100;
+}
+
+.restaurant-container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.restaurant-container img {
+  max-width: 98.5%;
+  height: auto;
+  margin-inline: 10px;
+}
+
+.restaurant-container svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+
+.restaurant-container svg:hover {
+  background: #3a3a3a57;
+}
+
+.laurel-container {
+  background: center no-repeat url("../img/malik-skydsgaard.jpg");
+  background-size: cover;
+}
+
+.laurel-container section {
+  padding: 55px 60px;
+}
+
+.laurel-container svg {
+  width: 100px;
+  height: 100px;
+}
+
+.laurel-dept {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.left-laurel {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+}
+
+.left-laurel .award {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: var(--first-font);
+  font-weight: 700;
+}
+
+.left-laurel .spoon {
+  width: 50px;
+  height: 50px;
+}
+
+.left-laurel h2 {
+  text-transform: capitalize;
+  font-family: var(--first-font);
+  font-size: 45px;
+  color: #dcca87;
+  padding-bottom: 30px;
+}
+
+.laurel-details {
+  display: flex;
+  gap: 2.5rem;
+  margin: 2.5rem auto;
+  margin-left: -1rem;
+}
+
+.left-laurel-details,
+.right-laurel-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.left-laurel-details {
+  display: flex;
+  order: 2;
+}
+
+.laurel-details svg {
+  width: 200px;
+}
+
+.laurel-text h6 {
+  font: 20px var(--first-font);
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #dcca87;
+}
+
+.laurel-text p {
+  font-size: 12px;
+  font-family: var(--second-font);
+  letter-spacing: 1.5px;
+}
+
+.right-laurel {
+  position: relative;
+}
+
+.right-laurel img {
+  max-width: 100%;
+}
+
+.right-laurel svg {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0;
+}
+
+/* GALLERY SECTION */
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background-image: url(../img/malik-skydsgaard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.6rem;
+}
+
+.left-gallery {
+  display: block;
+  flex-basis: 25%;
+  align-items: center;
+}
+
+.left-gallery .instagram {
+  display: block;
+  text-transform: capitalize;
+  font-family: var(--first-font);
+  font-size: 2rem;
+}
+
+.left-gallery h1 {
+  text-transform: capitalize;
+  font: 40px var(--first-font);
+  font-weight: 700;
+  color: #dcca87;
+  padding-bottom: 2rem;
+  width: fit-content;
+}
+
+.left-gallery p {
+  width: fit-content;
+  flex-wrap: wrap;
+  font: 16px inherit;
+  font-weight: 400;
+  padding-bottom: 2.4rem;
+}
+
+.left-gallery button {
+  background: #dcca87;
+  border: none;
+  padding: 0.8rem 3rem;
+  font-size: 20px;
+  font-family: var(--first-font);
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.left-gallery button:hover {
+  background: #eed77c;
+}
+
+.right-gallery {
+  position: relative;
+  width: fit-content;
+}
+
+.right-gallery .bg-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.bg{
+  position: relative;
+}
+
+.bg i{
+  font-size: 3.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+opacity: 0;
+transition: opacity .4s ease;
+}
+
+.bg:hover i{
+  opacity: 1;
+}
+
+
+.right-gallery img {
+  width: 100%;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.right-gallery img:hover {
+  filter: brightness(50%);
+}
+
+/* contact section */
+
+.contact-container {
+  background: no-repeat url(../img/malik-skydsgaard.jpg);
+  background-size: cover;
+}
+
+.contact {
+  padding: 5rem 10rem;
+  display: flex;
+  column-gap: 3rem;
+  justify-content: center;
+  margin: 1rem 3rem;
+}
+
+.left-contact {
+  padding-top: 2.5rem;
+}
+
+.left-contact .text-contact {
+  width: fit-content;
+  font-size: 20px;
+  font-family: var(--first-font);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.left-contact svg {
+  width: 2rem;
+  margin: 0.5rem 0 1.4rem;
+}
+
+.left-contact h1 {
+  width: fit-content;
+  font: 40px var(--first-font);
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  text-transform: capitalize;
+  color: #dcca87;
+  padding-bottom: 3rem;
+}
+
+.left-contact p {
+  width: fit-content;
+  font-size: 12px;
+  padding-bottom: 1.5rem;
+}
+
+.left-contact h2 {
+  width: fit-content;
+  font-size: 20px;
+  font-family: var(--first-font);
+  color: #dcca87;
+  padding-bottom: 20px;
+}
+
+.left-contact .working-hours {
+  word-spacing: 0.3rem;
+  text-align: center;
+  font-family: inherit;
+}
+
+.left-contact button {
+  background: #dcca87;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font: 20px var(--first-font);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.left-contact button:hover {
+  background: #eed77c;
+}
+
+/* right contact section */
+
+.right-contact {
+  max-width: 100%;
+  position: relative;
+}
+
+.right-contact img {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.right-contact::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  background: #dcca87;
+  position: absolute;
+  left: -1rem;
+  bottom: -0.8rem;
+}
+
+.right-contact::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  background: #dcca87;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+}
+
+/* newsletter section */
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+  background: #0c0c0c;
+  border: 0.1rem solid #dcca87;
+  padding: 1.6rem 1rem;
+
+  margin: 1.5rem 0;
+}
+
+.newsletter h5 {
+  font-family: var(--first-font);
+  font-size: 2.2rem;
+  letter-spacing: 0.12rem;
+}
+
+.newsletter svg {
+  margin: 0 auto;
+  width: 14rem;
+}
+
+.newsletter h1 {
+  font-size: 2.8rem;
+  text-transform: capitalize;
+  font-family: var(--first-font);
+  color: #dcca87;
+  letter-spacing: 0.12rem;
+}
+
+.newsletter span {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  padding-bottom: 0.8rem;
+}
+
+/* input section */
+
+.input-container {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-container input {
+  width: 73%;
+  height: 40px;
+  background: transparent;
+  border-color: #dcca87;
+  outline: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+.input-container input::placeholder {
+  color: #dcca87;
+}
+
+.input-container button {
+  background: #dcca87;
+  border: 0;
+  padding: 0.5rem 1.6rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  font-family: var(--first-font);
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 1.3rem;
+}
+
+.input-container button:hover {
+  background: #eed77c;
+}
+
+/* footer section */
+
+.footer-container {
+  padding-top: 4rem;
+  background: no-repeat url(../img/malik-skydsgaard.jpg);
+}
+
+footer {
+  margin: auto 10rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-contact,
+.footer-quote,
+.footer-working-hours {
+  width: fit-content;
+}
+
+.footer-contact h2 {
+  width: fit-content;
+  font-size: 2rem;
+  font-family: var(--first-font);
+  text-transform: capitalize;
+  color: #dcca87;
+  padding-bottom: 1rem;
+}
+
+.footer-contact address {
+  font-style: normal;
+  word-spacing: 0.12rem;
+}
+
+.footer-contact .phone {
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+/* footer Quote */
+.footer-quote h1 {
+  font: 2.8rem var(--first-font);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #dcca87;
+  padding-bottom: 1rem;
+}
+
+.footer-quote svg {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+footer div:nth-child(4) {
+  grid-column: 1/-1;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+  padding-top: 1rem;
+}
+
+.footer-social i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.45s;
+}
+
+.footer-social i:hover {
+  transform: translateY(-3px);
+  transform: scale(1.3);
+}
+
+/* footer working  */
+
+.footer-working-hours h2 {
+  font-size: 2.3rem;
+  font-family: var(--first-font);
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  color: #dcca87;
+  padding-bottom: 1rem;
+}
+
+.work-hours {
+  display: block;
+  text-align: center;
+  word-spacing: 0.12rem;
+  padding: 0.4rem 0;
+}
+
+.work-hours .days {
+  padding-bottom: 0.2rem;
+}
+
+.reserve {
+  display: flex;
+  justify-self: center;
+  padding: 2.8rem 0 2rem;
+}
+
+#date {
+  padding-right: 0.13rem;
+  font-weight: 600;
+}
+
+/* scroll button */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #50482b70;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #726947;
+  width: 8px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dcca87;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1800px){
+  body{
+zoom: 1.8;
+  } 
+}
+
+@media (max-width: 1340px) {
+
+
+  .sidebar-container,
+  .scroll-section,
+  .numbers-section {
+    display: none;
+  }
+
+  .restaurant-container {
+    max-width: fit-content;
+  }
+
+  .restaurant-container svg {
+    display: none;
+  }
+
+  .restaurant-container img {
+    max-width: 98%;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 1270px) {
+  .restaurant-container img {
+    width: 1200px;
+  }
+
+  .laurel-dept {
+    flex-direction: column;
+  }
+
+  .right-laurel img {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .right-laurel svg {
+    display: none;
+  }
+}
+
+@media (max-width: 1215px) {
+  /* home container */
+  .home {
+    flex-direction: column;
+  }
+
+  /* chef container */
+
+  .chef {
+    flex-direction: column;
+  }
+
+  /* contact */
+
+  .contact {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .contact-image {
+    justify-self: center;
+  }
+
+  .left-contact {
+    margin: 0 auto;
+  }
+
+  .right-contact::after,
+  .right-contact::before {
+    width: fit-content;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+
+  footer div:nth-child(4) {
+    grid-column: 2 / -1;
+  }
+}
+
+@media (max-width: 1120px) {
+
+    .logo {
+    flex-grow: 1;
+  }
+
+  nav {
+    background: #0c0b08a9;
+    width: 70%;
+    max-width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 50;
+    padding: 2rem 0 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 15px #c7c5c59d;
+    transition: right 0.3s;
+  }
+
+  nav,
+  .left-navbar ul,
+  .login-box {
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+  }
+
+  .login-box{
+    position: initial;
+  }
+
+  .left-navbar ul {
+    font-size: 1.5rem;
+    font-weight: 700;
+  } 
+
+  .hamburger,
+  .close{
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+  }
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+}
+@media (max-width: 1000px) {
+  .special-drink-container {
+    width: 100%;
+    display: grid;
+  }
+
+  .cocktail-container,
+  .left-special-container {
+    justify-items: center;
+  }
+
+  .laurel-details {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 925px) {
+  .bg-image::before,
+  .bg-image::after {
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+
+  .about-text-container {
+    flex-direction: column;
+    margin-top: -20rem;
+  }
+
+  .mid-special-container img {
+    max-width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  footer div {
+    width: 100%;
+    font-size: small;
+  }
+
+  footer > div:nth-child(1),
+  footer > div:nth-child(3) {
+    width: 100%;
+    margin-left: 0.5rem;
+  }
+
+}
+
