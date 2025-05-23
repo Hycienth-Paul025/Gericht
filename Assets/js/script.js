@@ -1,16 +1,15 @@
-/* const igLogo = document.getElementById("ig-logo");
-const imageEl = document.querySelectorAll(".bg-image");
-const bgCont = document.querySelector(".bg-container");
- */
-/* bgCont.addEventListener("click", showIcon());
- 
-function showIcon(){
-    bgCont.forEach(image => {
-        imageEl.addEventListener("click", ()=> {
-            image.style.display = "none"
-        })
-    });
-} */
+const headerEl = document.querySelector("header");
+
+window.addEventListener("scroll", addShadow);
+
+function addShadow() {
+  if (window.scrollY >= 75) {
+    headerEl.classList.add("header-shadow");
+  } 
+  else {
+    headerEl.classList.remove("header-shadow");
+  }
+}
 
 const navBar = document.querySelector("nav");
 
@@ -24,12 +23,26 @@ navClose = document.getElementById("navClose").addEventListener("click", () => {
   navBar.classList.remove("navActive");
 });
 
-
 //footer year
 dateEL = document.getElementById("date");
 
 const current = new Date();
 dateEL.textContent = current.getFullYear();
+
+//show top button
+
+topbtnEl = document.querySelector(".top-btn");
+
+window.addEventListener("scroll", showTop);
+
+function showTop() {
+  if (window.scrollY >= 75) {
+    topbtnEl.classList.add("show-btn");
+  } 
+  else {
+    topbtnEl.classList.remove("show-btn");
+  }
+}
 
 // Swiper JS
 /* 
