@@ -1,4 +1,4 @@
-const headerEl = document.querySelector("header");
+/* const headerEl = document.querySelector("header");
 
 window.addEventListener("scroll", addShadow);
 
@@ -10,7 +10,7 @@ function addShadow() {
     headerEl.classList.remove("header-shadow");
   }
 }
-
+ */
 const navBar = document.querySelector("nav");
 
 const navToggle = document
@@ -30,7 +30,7 @@ const current = new Date();
 dateEL.textContent = current.getFullYear();
 
 //show top button
-
+/* 
 topbtnEl = document.querySelector(".top-btn");
 
 window.addEventListener("scroll", showTop);
@@ -38,11 +38,12 @@ window.addEventListener("scroll", showTop);
 function showTop() {
   if (window.scrollY >= 75) {
     topbtnEl.classList.add("show-btn");
-  } 
-  else {
+  } else {
     topbtnEl.classList.remove("show-btn");
   }
 }
+ */ 
+
 
 // Swiper JS
 /* 

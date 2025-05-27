@@ -43,17 +43,13 @@ header {
   max-width: 100%;
   gap: 14rem;
   padding: 15px 50px;
-  position: fixed;
-  top: 0;
   background: #0c0b08;
-  z-index: 6;
-  transition: box-shadow 0.3s;
 }
 
-/* Add Header-shadow */
+/* Add Header-shadow 
 .header-shadow {
   box-shadow: 0 2px 5px #5e5d5d9f;
-}
+}*/
 
 .logo {
   font-size: 35px;
@@ -96,18 +92,8 @@ nav {
 }
 
 .right-navbar .login-box {
-  width: 200px;
-  padding: 0 0.4rem;
-  border-radius: 20px;
-  background: #0c0c0c;
-  position: absolute;
-  right: -84px;
-  box-shadow: 1px -1px 10px #464545e8;
-  display: none;
-}
-
-.right-navbar li:hover .login-box {
-  display: block;
+  display: flex;
+  gap: 5px;
 }
 
 .login-box li {
@@ -116,11 +102,11 @@ nav {
   text-align: center;
   border-radius: 15px;
   font-size: 1vw;
+  transition: color 0.3s ease;
 }
 
 .login-box li:hover {
-  background: #ddd;
-  color: #333;
+  color: #aaa;
 }
 
 /* show login bar */
@@ -131,7 +117,6 @@ nav {
 .left-navbar ul li,
 .login-box li {
   cursor: pointer;
-  transition: color 0.3s, background 0.5s;
 }
 
 .left-navbar ul li:hover {
@@ -1032,7 +1017,7 @@ section.about {
   background: #eed77c;
 }
 
-/* top button */
+/* top button 
 
 .top-btn {
   background: #dcca87;
@@ -1060,7 +1045,8 @@ section.about {
 
 .show-btn {
   bottom: 50px;
-}
+}*/
+
 
 /* footer section */
 
