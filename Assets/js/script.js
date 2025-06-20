@@ -29,7 +29,6 @@ dateEL = document.getElementById("date");
 const current = new Date();
 dateEL.textContent = current.getFullYear();
  
-
 //show top button
 /* 
 topbtnEl = document.querySelector(".top-btn");
