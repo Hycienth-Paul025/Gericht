@@ -5,9 +5,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
+  /* color */
+  --primary-color: #0c0b08;
+  --secondary-color: #dcca87;
+  --white-color: #fff;
+  --grey-color: #aaa;
+
+  /* font-family */
   --first-font: "Cormorant Upright";
   --second-font: "open sans";
   --third-font: "Bestermind", sans-serif;
+
+  /* font-size */
+  --primary-font: 3.7rem;
+  --secondary-font: 2.5rem;
+  --tertiary-font: 2rem;
+  --semi-tertiary-font: 1.5rem;
+  --default-font: 1rem;
+  --small-font: 0.8rem;
+  --smaller-font: 0.6rem;
+
 }
 
 * {
@@ -18,17 +35,20 @@
 }
 
 html {
-  font-size: clamp(0.875rem, 0.5rem + 1vw, 1.375rem);
+  font-size: clamp(0.875rem, 0.5rem + 1vw, 1.375rem); 
+  /*  font-size: 62.5%; this convert 1rem to become 10px instead of 16px and also for easy calculation */
+
   scroll-behavior: smooth;
 }
 
 body {
-  background: #0c0b08;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--white-color);
   font-family: "open sans", sans-serif;
 }
 
-a {
+a :link,
+a:visited {
   text-decoration: none;
   color: inherit;
 }
@@ -43,7 +63,7 @@ header {
   max-width: 100%;
   gap: 14rem;
   padding: 15px 50px;
-  background: #0c0b08;
+  background: var(--primary-color);
 }
 
 /* Add Header-shadow 
@@ -52,7 +72,7 @@ header {
 }*/
 
 .logo {
-  font-size: 35px;
+  font-size: --font;
   font-family: "cormorant Uprigh";
   text-transform: uppercase;
   letter-spacing: 1.76px;
@@ -86,7 +106,6 @@ nav {
 
 .right-navbar .login i {
   font-size: 1.4rem;
-  cursor: pointer;
   margin-bottom: 1rem;
   align-self: center;
 }
@@ -98,15 +117,13 @@ nav {
 
 .login-box li {
   font-weight: 400;
-  margin: 14px 0;
   text-align: center;
-  border-radius: 15px;
-  font-size: 1vw;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .login-box li:hover {
-  color: #aaa;
+  color: var(--grey-color);
 }
 
 /* show login bar */
@@ -120,7 +137,7 @@ nav {
 }
 
 .left-navbar ul li:hover {
-  color: #aaa;
+  color: var(--grey-color);
 }
 
 .hamburger,
@@ -142,18 +159,17 @@ nav {
 
 .home {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  padding-inline: 12rem;
+  margin: 0 auto;
+  gap: 5rem;
+  padding: 5rem 10rem;
 }
 
 .home-text-container {
-  width: fit-content;
+  width: 40%;
 }
 
 .home-text-container .home-text {
-  font-size: 15px;
+  font-size: var(--smaller-font);
   font-weight: 500;
   letter-spacing: 2px;
 }
@@ -165,52 +181,36 @@ nav {
 }
 
 .home-text-container h1 {
-  color: #dcca87;
-  font-size: 90px;
+  color: var(--secondary-color);
+  font-size: var(--secondary-font);
   font-weight: 600;
   letter-spacing: 3.6px;
+  margin-bottom: 1.5rem;
   text-transform: capitalize;
   font-family: "Cormorant Upright", sans-serif;
 }
 
 .home-text-container small {
   display: inline-block;
-  font-size: 15px;
-  color: #aaa;
+  font-size: var(--smaller-font);
+  color: var(--grey-color);
   text-align: justify;
-  letter-spacing: 0.64px;
 }
 
 .home-text-container button {
   padding: 8px 32px;
   align-items: center;
   font-weight: bolder;
-  color: #0c0b08;
+  color: var(--primary-color);
   font-family: "Cormorant Upright";
   letter-spacing: 1.7px;
   border: none;
-  cursor: pointer;
-  background: #dcca87;
-  transition: background 0.3s;
+  background: var(--secondary-color);
   margin-top: 1rem;
 }
 
-.home-text-container button:hover {
-  background: #eed77c;
-} /* 
-
-.sidebar-container {
-  display: flex;
-  gap: 1.5rem;
-  padding-right: -5rem;
-  transform: rotate(-90deg);
-  position: absolute;
-  left: -2rem;
-  top: 50%;
-} */
-
 .image-container {
-  width: 100%;
+  max-width: 100%;
   justify-items: center;
 }
 
@@ -248,35 +248,30 @@ nav {
 
 section.about {
   background-image: url("../img/malik-skydsgaard.jpg");
-  background-position: center;
+  background-position: right bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  padding: 5rem 0;
 }
 
 .about-text-container {
-  background: no-repeat url(../img/G.png);
-  background-position: center;
+  background: no-repeat center url(../img/G.png);
   display: flex;
-  justify-content: center;
-  justify-self: center;
   align-items: center;
-  gap: 1.5rem;
-  position: relative;
-  overflow: hidden;
-  padding-inline: 12rem;
+  padding-inline: 10rem;
+  gap: 2.5rem;
 }
 
 .left-about-text {
   display: block;
-  gap: 1.5rem;
+  width: 100%;
 }
 
 .left-about-text h1 {
   display: block;
-  font-size: 2.5rem;
+  font-size: var(--tertiary-font);
   font-weight: 600;
   font-family: "Cormorant Upright";
-  color: #dcca87;
+  color: var(--secondary-color);
   text-align: right;
 }
 
@@ -287,27 +282,22 @@ section.about {
 
 .left-about-text p {
   text-align: right;
-  font-size: 14px;
-  display: inline-block;
+  font-size: var(--smaller-font);
+  display: block;
+  font-weight: 100;
   padding: 1rem 0;
 }
 
 .left-about-text button {
-  display: flex;
-  justify-self: flex-end;
+  float: right;
   padding: 8px 32px;
-  background: #dcca87;
-  color: #0c0b08;
-  font-weight: 700;
-  font-size: 16px;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: var(--small-font);
   letter-spacing: 1px;
   border: none;
   font-family: "Cormorant Upright";
-  cursor: pointer;
-}
-
-.mid-about-container {
-  display: flex;
 }
 
 .about-image {
@@ -315,20 +305,20 @@ section.about {
 }
 
 .about-image img {
-  width: fit-content;
+  width: 60px;
+  height: 600px;
 }
 
 .right-about-text {
-  display: block;
-  gap: 1.5rem;
+  width: 100%;
 }
 
 .right-about-text h1 {
   display: block;
-  font-size: 2.5rem;
+  font-size: var(--tertiary-font);
   font-weight: 600;
   font-family: "Cormorant Upright";
-  color: #dcca87;
+  color: var(--secondary-color);
 }
 
 .right-about-text svg {
@@ -336,44 +326,33 @@ section.about {
 }
 
 .right-about-text p {
-  text-align: left;
-  font-size: 14px;
+  font-size: var(--smaller-font);
   display: inline-block;
   padding: 1rem 0;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .right-about-text button {
   display: flex;
   justify-self: flex-start;
   padding: 8px 32px;
-  background: #dcca87;
-  color: #0c0b08;
-  font-weight: 700;
-  font-size: 16px;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: var(--small-font);
   letter-spacing: 1px;
   border: none;
   font-family: "Cormorant Upright";
-  cursor: pointer;
-}
-
-.left-about-text button,
-.right-about-text button {
-  transition: background 0.3s;
-}
-
-.left-about-text button:hover,
-.right-about-text button:hover {
-  background: #eed77c;
 }
 
 /* SPECIAL CONTAINER */
 
 .special-container {
   width: 100%;
-  padding: 2rem 5.5rem;
+  padding: 5rem 5.5rem;
   zoom: 0.8;
+  padding-inline: 3rem;
 }
 
 .special-heading {
@@ -384,7 +363,7 @@ section.about {
 }
 
 .special-heading span {
-  font-size: 20px;
+  font-size: var(--default-font);
   font-weight: 500;
   text-transform: capitalize;
   word-spacing: 2px;
@@ -398,9 +377,10 @@ section.about {
 
 .special-heading h1 {
   text-transform: capitalize;
-  font-size: 3.3rem;
-  color: #dcca87;
+  font-size: var(--secondary-font);
+  color: var(--secondary-color);
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .special-drink-container {
@@ -408,6 +388,7 @@ section.about {
   gap: 1rem;
   justify-content: center;
   padding-inline: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Left Special */
@@ -415,7 +396,7 @@ section.about {
 .left-special-container h2 {
   text-align: center;
   font-family: var(--first-font);
-  font-size: 2rem;
+  font-size: var(--tertiary-font);
   text-transform: capitalize;
 }
 
@@ -448,7 +429,7 @@ section.about {
 }
 
 .drinks-details .drink-price {
-  font-size: 15px;
+  font-size: var(--small-font);
   font-family: var(--second-font);
 }
 
@@ -480,21 +461,14 @@ section.about {
   letter-spacing: 1px;
   border: none;
   font-family: "Cormorant Upright";
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.special button:hover {
-  background: #eed77c;
 }
 
 /* Chef Section */
 
 .chef-container {
-  width: 100%;
-  max-width: 100%;
-  background: no-repeat center url(../img/malik-skydsgaard.jpg);
+  background: no-repeat right bottom url(../img/malik-skydsgaard.jpg);
   background-size: cover;
+  flex-wrap: wrap;
 }
 
 .chef {
@@ -503,9 +477,7 @@ section.about {
   justify-self: center;
   gap: 4rem;
   align-items: center;
-  max-width: 100vw;
-  padding: 10rem 7rem;
-  zoom: 0.7;
+  padding: 5rem 10rem;
 }
 
 .chef-image {
@@ -538,13 +510,10 @@ section.about {
   z-index: 3;
 }
 
-.chef-container {
-  flex-wrap: wrap;
-}
-
 .chef-text-container {
   flex-wrap: wrap;
 }
+
 .chef-text-container span {
   display: block;
   font: 15px var(--first-font);
@@ -554,18 +523,19 @@ section.about {
 .chef-text-container .chef-heading {
   font-family: var(--first-font);
   color: #dcca87;
-  font-size: 60px;
+  font-size: var(--tertiary-font);
   text-transform: capitalize;
   padding-top: 10px;
-  padding-bottom: 4.5rem;
+  padding-bottom: 1rem;
 }
 
 .chef-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: var(--smaller-font);
   font-family: var(--second-font);
+  font-weight: 300;
   line-height: 20px;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 
 .chef-text svg {
@@ -573,38 +543,37 @@ section.about {
 }
 
 .founder-section h2 {
-  font-size: 32px;
+  font-size: var(--semi-tertiary-fonttertiary-font);
+  font-weight: 400;
   text-transform: capitalize;
   font-family: var(--first-font);
-  color: #dcca87;
+  color: var(--secondary-color);
+  letter-spacing: 1.7px;
 }
 
 .founder-section p {
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--smaller-font);
   text-transform: capitalize;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 300;
   padding-bottom: 3rem;
 }
 
 .signature p {
-  font-size: 40px;
+  font-size: var(--secondary-font);
   text-transform: capitalize;
   font-family: var(--third-font);
   font-weight: 100;
 }
 
+/* RESTAURANT */
+
 .restaurant-container {
   width: 100%;
   max-width: 100%;
   position: relative;
-}
-
-.restaurant-container img {
-  max-width: 98.5%;
-  height: auto;
-  margin-inline: 10px;
+  overflow: hidden;
 }
 
 .restaurant-container svg {
@@ -614,12 +583,6 @@ section.about {
   transform: translate(-50% -50%);
   width: 80px;
   height: 80px;
-  border-radius: 50px;
-  transition: background 0.3s;
-}
-
-.restaurant-container svg:hover {
-  background: #3a3a3a57;
 }
 
 /* Laurel Container */
@@ -652,7 +615,7 @@ section.about {
 
 .left-laurel .award {
   display: block;
-  font-size: 20px;
+  font-size: var(--default-font);
   text-transform: capitalize;
   font-family: var(--first-font);
   font-weight: 700;
@@ -666,14 +629,15 @@ section.about {
 .left-laurel h2 {
   text-transform: capitalize;
   font-family: var(--first-font);
-  font-size: 45px;
-  color: #dcca87;
+  font-size: var(--secondary-font);
+  color: var(--secondary-color);
 }
 
 .laurel-details {
   display: flex;
-  gap: 0.4rem;
-  margin: 2.5rem auto;
+  width: 100%;
+  gap: 1rem;
+  padding: 1.4rem auto;
 }
 
 .left-laurel-details {
@@ -686,22 +650,22 @@ section.about {
 }
 
 .laurel-text h6 {
-  font: 20px var(--first-font);
+  font: var(--small-font) var(--first-font);
   text-transform: capitalize;
   font-weight: 400;
-  color: #dcca87;
+  color: var(--secondary-color);
 }
 
 .laurel-text p {
-  font-size: 12px;
+  font-size: var(--smaller-font);
   font-family: var(--second-font);
-  letter-spacing: 1.5px;
+  width: 100%;
 }
 
 .left-laurel-details,
 .right-laurel-details {
   display: flex;
-  gap: 0.725rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -709,25 +673,23 @@ section.about {
 
 .right-laurel {
   width: 100%;
+  padding-left: 4rem;
 }
 
 .laurel-image {
   position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 0 1.5rem;
 }
 
 .right-laurel img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .laurel-image svg {
   width: 250px;
   height: 250px;
   position: absolute;
-  bottom: 1rem;
-  left: 0;
+  bottom: 0;
+  left: -15%;
 }
 
 /* GALLERY SECTION */
@@ -739,53 +701,47 @@ section.about {
   background-image: url(../img/malik-skydsgaard.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1.6rem;
+  padding: 1.6rem 0;
 }
 
 .left-gallery {
   display: block;
   flex-basis: 35%;
   align-self: center;
+  padding: 2.5rem;
 }
 
 .left-gallery .instagram {
   display: block;
   text-transform: capitalize;
   font-family: var(--first-font);
-  font-size: 1.4rem;
+  font-size: var(--default-font);
 }
 
 .left-gallery h1 {
   text-transform: capitalize;
   font: 40px var(--first-font);
   font-weight: 700;
-  color: #dcca87;
+  color: var(--secondary-color);
   padding-bottom: 0.9375rem;
   width: fit-content;
 }
 
 .left-gallery p {
-  width: fit-content;
   flex-wrap: wrap;
-  font-size: small;
-  font-weight: 400;
+  font-size: var(--smaller-font);
+  font-weight: 100;
   padding-bottom: 0.5rem;
 }
 
 .left-gallery button {
-  background: #dcca87;
+  background: var(--secondary-color);
   border: none;
-  padding: 0.8rem 3rem;
-  font-size: 20px;
+  padding: 0.4rem 1.5rem;
+  font-size: var(--small-font);
   font-family: var(--first-font);
   font-weight: 500;
   text-transform: capitalize;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.left-gallery button:hover {
-  background: #eed77c;
 }
 
 .right-gallery {
@@ -796,7 +752,7 @@ section.about {
 .right-gallery .bg-container {
   display: flex;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -805,7 +761,7 @@ section.about {
 }
 
 .bg i {
-  font-size: 3.6rem;
+  font-size: var(--tertiary-font);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -821,7 +777,6 @@ section.about {
 
 .right-gallery img {
   width: 100%;
-  cursor: pointer;
   transition: filter 0.3s;
 }
 
@@ -839,18 +794,20 @@ section.about {
 .contact {
   padding: 5rem 10rem;
   display: flex;
-  column-gap: 3rem;
+  column-gap: 2rem;
   justify-content: center;
-  margin: 1rem 3rem;
+  margin: 0 3rem;
 }
 
 .left-contact {
-  padding-top: 2.5rem;
+  padding-top: 0.5rem;
+  margin-right: 1rem;
+  width: 50%;
 }
 
 .left-contact .text-contact {
   width: fit-content;
-  font-size: 20px;
+  font-size: var(--default-font);
   font-family: var(--first-font);
   font-weight: 600;
   text-transform: capitalize;
@@ -858,17 +815,16 @@ section.about {
 
 .left-contact svg {
   width: 2rem;
-  margin: 0.5rem 0 1.4rem;
 }
 
 .left-contact h1 {
   width: fit-content;
-  font: 40px var(--first-font);
+  font: var(--secondary-font) var(--first-font);
   font-weight: 500;
   letter-spacing: 0.15rem;
   text-transform: capitalize;
-  color: #dcca87;
-  padding-bottom: 3rem;
+  color: var(--secondary-color);
+  padding-bottom: 1.5rem;
 }
 
 .left-contact p {
@@ -887,22 +843,14 @@ section.about {
 
 .left-contact .working-hours {
   word-spacing: 0.3rem;
-  text-align: center;
-  font-family: inherit;
 }
 
 .left-contact button {
-  background: #dcca87;
+  background: var(--secondary-color);
   border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 700;
-  font: 20px var(--first-font);
-  transition: background 0.3s;
-  cursor: pointer;
-}
-
-.left-contact button:hover {
-  background: #eed77c;
+  padding: 0.5rem 1.8rem;
+  font-weight: 400;
+  font: var(--small-font) var(--first-font);
 }
 
 /* right contact section */
@@ -920,19 +868,19 @@ section.about {
 
 .right-contact::before {
   content: "";
-  width: 400px;
-  height: 400px;
-  background: #dcca87;
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-color);
   position: absolute;
   left: -1rem;
-  bottom: -0.8rem;
+  bottom: -0.1rem;
 }
 
 .right-contact::after {
   content: "";
-  width: 400px;
-  height: 400px;
-  background: #dcca87;
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-color);
   position: absolute;
   top: -1rem;
   right: -1rem;
@@ -940,22 +888,32 @@ section.about {
 
 /* newsletter section */
 
+.newsletter-container{
+ background: no-repeat url(../img/malik-skydsgaard.jpg);
+}
+
 .newsletter {
+  background: var(--primary-color);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-self: center;
   text-align: center;
-  background: #0c0c0c;
-  border: 0.1rem solid #dcca87;
-  padding: 1.6rem 1rem;
+  border-left: .5px solid var(--secondary-color);
 
-  margin: 1.5rem 0;
+  border-right: .5px solid var(--secondary-color);
+  
+  border-bottom: 1px solid var(--secondary-color);
+
+  padding: 10px 6rem;
+box-shadow: 0 10px 15px  #161616;
 }
 
 .newsletter h5 {
   font-family: var(--first-font);
-  font-size: 2.2rem;
+  font-size: var(--default-font);
   letter-spacing: 0.12rem;
+  padding-inline: 4rem;
 }
 
 .newsletter svg {
@@ -964,57 +922,57 @@ section.about {
 }
 
 .newsletter h1 {
-  font-size: 2.8rem;
+  font-size: var(--tertiary-font);
   text-transform: capitalize;
   font-family: var(--first-font);
-  color: #dcca87;
+  color: var(--secondary-color);
   letter-spacing: 0.12rem;
+  margin-bottom: 1.5rem;
 }
 
 .newsletter span {
   font-size: 0.7rem;
   text-transform: capitalize;
   padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 /* input section */
 
 .input-container {
-  max-width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
   margin-bottom: 1rem;
 }
 
 .input-container input {
-  width: 73%;
+  width: 80%;
+padding: 0 .5rem;
   height: 40px;
   background: transparent;
-  border-color: #dcca87;
+  border:1px solid var(--secondary-color);
   outline: 0;
-  color: #fff;
-  font-size: 1.2rem;
-  padding-left: 0.5rem;
+  color: var(--white-color);
+  font-size: 10px;
+
 }
 
 .input-container input::placeholder {
-  color: #dcca87;
+  color: var(--secondary-color);
+  font-family: var(--first-font);
 }
 
 .input-container button {
-  background: #dcca87;
+  background: var(--secondary-color);
   border: 0;
-  padding: 0.5rem 1.6rem;
+  padding: 0.4rem 1.5rem;
   font-size: 0.8rem;
   text-transform: capitalize;
   font-family: var(--first-font);
   font-weight: 700;
   letter-spacing: 1px;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-left: 1.3rem;
-}
-
-.input-container button:hover {
-  background: #eed77c;
+  margin-left: 0.1rem;
 }
 
 /* top button 
@@ -1047,7 +1005,6 @@ section.about {
   bottom: 50px;
 }*/
 
-
 /* footer section */
 
 .footer-container {
@@ -1061,18 +1018,26 @@ footer {
 
 .footer-data {
   display: flex;
-  gap: 1.3rem;
+  gap: 3.3rem;
   justify-content: center;
   align-items: center;
   margin-bottom: 1.25rem;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .footer-data > div {
   text-align: center;
 }
 
+.footer-contact,
+.footer-quote,
+.footer-working-hours {
+  flex: 1;
+}
+
 .footer-contact h1 {
-  font-size: 1.2rem;
+  font-size: var(--default-font);
   font-family: var(--first-font);
   text-transform: capitalize;
   padding-bottom: 1rem;
@@ -1091,15 +1056,17 @@ footer {
 
 /* footer Quote */
 .footer-quote h1 {
-  font: 2rem var(--first-font);
+  font: var(--tertiary-font) var(--first-font);
   text-transform: uppercase;
   font-weight: 700;
   color: #dcca87;
   padding-bottom: 0.5rem;
 }
 
-.footer-quote p {
+.footer-quote .quote {
+  margin: 0 auto;
   font-size: small;
+  width: 80%;
 }
 
 .footer-quote svg {
@@ -1215,10 +1182,98 @@ footer {
 
 @media (max-width: 1200px) {
   /* home container */
-  .home {
+ 
+  .logo {
+    flex-grow: 1;
+  }
+
+  nav {
+    background: rgb(var(--primary-color), .6);
+    width: 70%;
+    width: 60vw;
+    height: 120vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 50;
+    padding: 2rem 0 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 15px #c7c5c59d;
+    transition: right 0.3s;
+  }
+
+  nav,
+  .left-navbar ul {
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+  }
+
+  .left-navbar {
+    width: 100%;
+    padding-top: 10rem;
+  }
+
+  .right-navbar .login {
+    display: none;
+  }
+
+
+  .left-navbar ul {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+ .home {
     flex-direction: column;
     gap: 3rem;
-    margin-bottom: 23rem;
+
+  }
+
+  .home-text-container{
+    width: 80%;
+  }
+
+  .hamburger,
+  .close {
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  section.about{
+    padding: 0;
+  }
+
+  .about-text-container {
+    flex-direction: column;
+    padding-inline: 20rem;
+  }
+
+  .left-about-text button{
+    float: left;
+  }
+
+  .left-about-text p,
+  .left-about-text h1 {
+    text-align: left;
+  }
+
+  .left-about-text svg {
+    float: left;
+  }
+
+  .left-about-text button {
+    justify-self: start;
+  }
+
+  .swiper {
+    width: 100%;
+    height: auto;
   }
 
   .bg-image img {
@@ -1262,104 +1317,26 @@ footer {
   }
 
   /* Footer */
-}
 
-@media (max-width: 1200px) {
-  .logo {
-    flex-grow: 1;
-  }
 
-  nav {
-    background: #0c0b08a9;
-    width: 70%;
-    width: 60vw;
-    height: 50%;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 50;
-    padding: 2rem 0 0;
-    backdrop-filter: blur(10px);
-    box-shadow: 2px 0 15px #c7c5c59d;
-    transition: right 0.3s;
-  }
-
-  nav,
-  .left-navbar ul {
-    flex-direction: column;
-    gap: 2.4rem;
-    text-align: center;
-  }
-
-  .left-navbar {
-    width: 100%;
-  }
-
-  .right-navbar .login {
-    display: none;
-  }
-
-  .right-navbar .login-box {
-    display: block;
-    position: static;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    font-weight: 600;
-    gap: 1.4rem;
-    width: 100%;
-    font-size: 1.3rem;
-  }
-
-  .right-navbar .login-box li:hover {
-    background: transparent;
-    color: inherit;
-  }
-
-  .left-navbar ul {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  .hamburger,
-  .close {
-    display: block;
-  }
-
-  .close {
-    position: absolute;
-    top: 3.8rem;
-    right: 2rem;
-  }
-
-  .about-text-container {
-    flex-direction: column;
-    margin-top: -20rem;
-    padding-bottom: 2rem;
-  }
-
-  .left-about-text p,
-  .left-about-text h1 {
-    text-align: left;
-  }
-
-  .left-about-text svg {
-    float: left;
-  }
-
-  .left-about-text button {
-    justify-self: start;
-  }
-
-  .swiper {
-    width: 100%;
-    height: auto;
-  }
 }
 @media (max-width: 1000px) {
+
+
+
+  .home-text-container{
+width: 100%;
+  }
+
   .home-text-container h1 {
     font-size: 3.5rem;
     padding-bottom: 1rem;
+  }
+
+  
+  .about-text-container {
+    flex-direction: column;
+    padding-inline: 15rem;
   }
 
   .special-heading h1 {
@@ -1368,11 +1345,18 @@ footer {
 
   .special-drink-container {
     width: 100%;
-    display: grid;
+    flex-direction: column;
+  align-items: center;
   }
 
   .laurel-details {
     flex-direction: column;
+    gap: 1rem;
+    
+  }
+
+  .right-laurel-details{
+    margin-top: 1rem;
   }
 
   .laurel-details svg {
@@ -1385,6 +1369,8 @@ footer {
 }
 
 @media (max-width: 900px) {
+
+
   .right-navbar .login-box li {
     font-size: 2vw;
   }
@@ -1399,12 +1385,11 @@ footer {
   }
 
   .contact {
-    padding: 0;
-    margin: 0;
+   padding: 0;
   }
 
   .left-contact {
-    justify-items: center;
+    margin: 0 auto;
   }
 
   .contact-image {
@@ -1420,6 +1405,15 @@ footer {
 }
 
 @media (max-width: 830px) {
+
+  .home{
+    padding-inline: 5rem ;
+  }
+
+.about-text-container{
+  padding-inline: 6rem;
+}
+
   .about .great {
     top: 40rem;
   }
@@ -1456,9 +1450,13 @@ footer {
     gap: 2rem;
   }
 
-  .left-contact {
-    justify-items: center;
+
+  /* Contact */
+
+  .contact-image img{
+    width: 100%;
   }
+
 
   /* Newsletter */
 
