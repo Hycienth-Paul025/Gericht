@@ -26,7 +26,6 @@
   --default-font: 1rem;
   --small-font: 0.8rem;
   --smaller-font: 0.6rem;
-
 }
 
 * {
@@ -37,7 +36,7 @@
 }
 
 html {
-  font-size: clamp(0.875rem, 0.5rem + 1vw, 1.375rem); 
+  font-size: clamp(0.875rem, 0.5rem + 1vw, 1.375rem);
   /*  font-size: 62.5%; this convert 1rem to become 10px instead of 16px and also for easy calculation */
 
   scroll-behavior: smooth;
@@ -73,9 +72,12 @@ header {
 }*/
 
 .logo {
+  font-size: 1.8rem;
   font-family: "cormorant Uprigh";
   text-transform: uppercase;
   letter-spacing: 1.76px;
+  color: var(--white-color);
+  padding-left: 1.6rem;
 }
 
 nav {
@@ -83,7 +85,6 @@ nav {
   justify-content: center;
   gap: 10rem;
   align-items: center;
-  padding-left: 60px
 }
 
 .left-navbar {
@@ -106,8 +107,6 @@ nav {
 .right-navbar .login-box {
   display: flex;
   gap: 15px;
-
- 
 }
 
 .login-box li {
@@ -116,12 +115,10 @@ nav {
   font-size: 12px;
 }
 
-
 /* show login bar */
 .show-login {
   display: block;
 }
-
 
 .hamburger,
 .close {
@@ -137,22 +134,25 @@ nav {
 /* HOME SECTION */
 
 .home-container {
-  margin: 6rem 0 4rem;
+  margin: 3.6rem 0 7rem;
 }
 
 .home {
   display: flex;
   margin: 0 auto;
   gap: 5rem;
-  padding:0 10rem;
+  padding-inline: 10rem;
 }
 
 .home-text-container {
-  width: 40%;
+  padding-top: 3rem;
+  width: 60%;
 }
 
 .home-text-container .home-text {
-  font-size: var(--smaller-font);
+  font-size: var(--small-font);
+  font-family: var(--first-font);
+  color:var(--white-color);
   font-weight: 500;
   letter-spacing: 2px;
 }
@@ -166,7 +166,6 @@ nav {
 .home-text-container h1 {
   color: var(--secondary-color);
   font-size: var(--secondary-font);
-  font-weight: 600;
   letter-spacing: 3.6px;
   margin-bottom: 1.5rem;
   text-transform: capitalize;
@@ -175,7 +174,7 @@ nav {
 
 .home-text-container small {
   display: inline-block;
-  font-size: var(--smaller-font);
+  font-size:12px;
   color: var(--grey-color);
   text-align: justify;
 }
@@ -423,13 +422,12 @@ section.about {
   padding: 32px 0;
 }
 
-
 .right-special-container h2 {
   text-align: center;
   font-family: var(--first-font);
   font-size: 40px;
   text-transform: capitalize;
- color: var(--semi-white-color);
+  color: var(--semi-white-color);
 }
 
 .cocktail-container span {
@@ -473,8 +471,8 @@ section.about {
 .chef-image::before {
   content: "";
   position: absolute;
-  top: -.8rem;
-  right: -.8rem;
+  top: -0.8rem;
+  right: -0.8rem;
   width: 70%;
   height: 70%;
   background: #dcca87;
@@ -483,8 +481,8 @@ section.about {
 .chef-image::after {
   content: "";
   position: absolute;
-  left: -.8rem;
-  bottom: -.8rem;
+  left: -0.8rem;
+  bottom: -0.8rem;
   width: 70%;
   height: 70%;
   background: #dcca87;
@@ -578,10 +576,9 @@ section.about {
   background-size: cover;
 }
 
-.laurel-logo{
-padding-left: 2rem;
+.laurel-logo {
+  padding-left: 2rem;
 }
-
 
 .laurel-dept {
   display: flex;
@@ -590,7 +587,6 @@ padding-left: 2rem;
   padding-inline: 10rem;
   padding-bottom: 4rem;
   margin-top: -2rem;
-
 }
 
 .left-laurel {
@@ -814,7 +810,7 @@ padding-left: 2rem;
   font-size: 12px;
 }
 
-.left-contact .contact-text{
+.left-contact .contact-text {
   padding-bottom: 1rem;
 }
 
@@ -830,7 +826,6 @@ padding-left: 2rem;
   word-spacing: 0.3rem;
   padding-bottom: 1rem;
 }
-
 
 .left-contact button {
   background: var(--secondary-color);
@@ -876,8 +871,8 @@ padding-left: 2rem;
 
 /* newsletter section */
 
-.newsletter-container{
- background: no-repeat url(../img/malik-skydsgaard.jpg);
+.newsletter-container {
+  background: no-repeat url(../img/malik-skydsgaard.jpg);
 }
 
 .newsletter {
@@ -887,14 +882,14 @@ padding-left: 2rem;
   flex-direction: column;
   justify-self: center;
   text-align: center;
-  border-left: .5px solid var(--shade-color);
+  border-left: 0.5px solid var(--shade-color);
 
-  border-right: .5px solid var(--shade-color);
-  
+  border-right: 0.5px solid var(--shade-color);
+
   border-bottom: 1px solid var(--shade-color);
 
   padding: 10px 6rem;
-box-shadow: 0 10px 15px  #161616;
+  box-shadow: 0 10px 15px #161616;
 }
 
 .newsletter h5 {
@@ -902,12 +897,11 @@ box-shadow: 0 10px 15px  #161616;
   font-size: var(--default-font);
   letter-spacing: 0.12rem;
   padding-top: 1.3rem;
-  padding-bottom:7px;
+  padding-bottom: 7px;
 }
 
 .newsletter svg {
   margin: 0 auto;
- 
 }
 
 .newsletter h1 {
@@ -937,14 +931,13 @@ box-shadow: 0 10px 15px  #161616;
 
 .input-container input {
   width: 80%;
-padding: 0 .5rem;
+  padding: 0 0.5rem;
   height: 40px;
   background: transparent;
-  border:1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   outline: 0;
   color: var(--white-color);
   font-size: 10px;
-
 }
 
 .input-container input::placeholder {
@@ -1174,13 +1167,13 @@ footer {
 
 @media (max-width: 1200px) {
   /* home container */
- 
+
   .logo {
     flex-grow: 1;
   }
 
   nav {
-    background: rgb(var(--primary-color), .6);
+    background: rgb(var(--primary-color), 0.6);
     width: 70%;
     width: 60vw;
     height: 120vh;
@@ -1210,19 +1203,17 @@ footer {
     display: none;
   }
 
-
   .left-navbar ul {
     font-size: 1.5rem;
     font-weight: 700;
   }
 
- .home {
+  .home {
     flex-direction: column;
     gap: 3rem;
-
   }
 
-  .home-text-container{
+  .home-text-container {
     width: 80%;
   }
 
@@ -1237,7 +1228,7 @@ footer {
     right: 2rem;
   }
 
-  section.about{
+  section.about {
     padding: 0;
   }
 
@@ -1246,7 +1237,7 @@ footer {
     padding-inline: 20rem;
   }
 
-  .left-about-text button{
+  .left-about-text button {
     float: left;
   }
 
@@ -1309,15 +1300,10 @@ footer {
   }
 
   /* Footer */
-
-
 }
 @media (max-width: 1000px) {
-
-
-
-  .home-text-container{
-width: 100%;
+  .home-text-container {
+    width: 100%;
   }
 
   .home-text-container h1 {
@@ -1325,7 +1311,6 @@ width: 100%;
     padding-bottom: 1rem;
   }
 
-  
   .about-text-container {
     flex-direction: column;
     padding-inline: 15rem;
@@ -1338,16 +1323,15 @@ width: 100%;
   .special-drink-container {
     width: 100%;
     flex-direction: column;
-  align-items: center;
+    align-items: center;
   }
 
   .laurel-details {
     flex-direction: column;
     gap: 1rem;
-    
   }
 
-  .right-laurel-details{
+  .right-laurel-details {
     margin-top: 1rem;
   }
 
@@ -1361,7 +1345,6 @@ width: 100%;
 }
 
 @media (max-width: 900px) {
-
   .right-navbar .login-box li {
     font-size: 2vw;
   }
@@ -1375,14 +1358,12 @@ width: 100%;
     max-width: 100%;
   }
 
-   
-  .chef{
+  .chef {
     padding: 0 3rem;
   }
 
-
   .contact {
-   padding: 0;
+    padding: 0;
   }
 
   .left-contact {
@@ -1398,18 +1379,17 @@ width: 100%;
     width: 50%;
     display: flex;
     margin: 0 auto;
-  } 
+  }
 }
 
 @media (max-width: 830px) {
-
-  .home{
-    padding-inline: 5rem ;
+  .home {
+    padding-inline: 5rem;
   }
 
-.about-text-container{
-  padding-inline: 6rem;
-}
+  .about-text-container {
+    padding-inline: 6rem;
+  }
 
   .about .great {
     top: 40rem;
@@ -1429,7 +1409,7 @@ width: 100%;
   .home-text-container h1 {
     font-size: 2.5rem;
   }
- 
+
   .chef-text-container .chef-heading {
     font-size: 2rem;
   }
@@ -1448,13 +1428,11 @@ width: 100%;
     gap: 2rem;
   }
 
-
   /* Contact */
 
-  .contact-image img{
+  .contact-image img {
     width: 100%;
   }
-
 
   /* Newsletter */
 
