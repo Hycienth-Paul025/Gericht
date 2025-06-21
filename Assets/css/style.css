@@ -9,6 +9,7 @@
   --primary-color: #0c0b08;
   --secondary-color: #dcca87;
   --white-color: #fff;
+  --semi-white-color: #cfcfcf;
   --grey-color: #aaa;
 
   /* font-family */
@@ -43,7 +44,7 @@ html {
 
 body {
   background: var(--primary-color);
-  color: var(--white-color);
+  color: var(--grey-color);
   font-family: "open sans", sans-serif;
 }
 
@@ -60,9 +61,8 @@ li {
 header {
   display: inline-flex;
   width: 100%;
-  max-width: 100%;
   gap: 14rem;
-  padding: 15px 50px;
+  padding: 20px 50px;
   background: var(--primary-color);
 }
 
@@ -72,24 +72,22 @@ header {
 }*/
 
 .logo {
-  font-size: --font;
   font-family: "cormorant Uprigh";
   text-transform: uppercase;
   letter-spacing: 1.76px;
-  font-weight: 500;
-  cursor: pointer;
 }
 
 nav {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   gap: 10rem;
   align-items: center;
+  padding-left: 60px
 }
 
 .left-navbar {
   font-family: inherit;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -104,41 +102,25 @@ nav {
   display: inline-block;
 }
 
-.right-navbar .login i {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  align-self: center;
-}
-
 .right-navbar .login-box {
   display: flex;
-  gap: 5px;
+  gap: 15px;
+
+ 
 }
 
 .login-box li {
   font-weight: 400;
   text-align: center;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  font-size: 12px;
 }
 
-.login-box li:hover {
-  color: var(--grey-color);
-}
 
 /* show login bar */
 .show-login {
   display: block;
 }
 
-.left-navbar ul li,
-.login-box li {
-  cursor: pointer;
-}
-
-.left-navbar ul li:hover {
-  color: var(--grey-color);
-}
 
 .hamburger,
 .close {
@@ -161,7 +143,7 @@ nav {
   display: flex;
   margin: 0 auto;
   gap: 5rem;
-  padding: 5rem 10rem;
+  padding:0 10rem;
 }
 
 .home-text-container {
@@ -398,15 +380,15 @@ section.about {
   font-family: var(--first-font);
   font-size: var(--tertiary-font);
   text-transform: capitalize;
+  color: var(--semi-white-color);
 }
 
 .wine-beer-container {
-  padding: 35px 0;
+  padding: 30px 0;
 }
 
 .wine-beer-container span {
   font-size: 13px;
-  font-family: inherit;
 }
 
 .drinks-details {
@@ -431,19 +413,22 @@ section.about {
 .drinks-details .drink-price {
   font-size: var(--small-font);
   font-family: var(--second-font);
+  color: var(--white-color);
 }
+
+/* Right Special */
+
+.cocktail-container {
+  padding: 32px 0;
+}
+
 
 .right-special-container h2 {
   text-align: center;
   font-family: var(--first-font);
   font-size: 40px;
   text-transform: capitalize;
-  padding-top: 2rem;
-}
-/* Right Special */
-
-.cocktail-container {
-  padding: 1.5rem 0;
+ color: var(--semi-white-color);
 }
 
 .cocktail-container span {
@@ -487,8 +472,8 @@ section.about {
 .chef-image::before {
   content: "";
   position: absolute;
-  top: -1rem;
-  right: -1rem;
+  top: -.8rem;
+  right: -.8rem;
   width: 70%;
   height: 70%;
   background: #dcca87;
@@ -497,15 +482,15 @@ section.about {
 .chef-image::after {
   content: "";
   position: absolute;
-  left: -1rem;
-  bottom: -1rem;
+  left: -.8rem;
+  bottom: -.8rem;
   width: 70%;
   height: 70%;
   background: #dcca87;
 }
 
 .chef-image img {
-  width: 500px;
+  width: 400px;
   position: relative;
   z-index: 3;
 }
@@ -526,7 +511,7 @@ section.about {
   font-size: var(--tertiary-font);
   text-transform: capitalize;
   padding-top: 10px;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .chef-text {
@@ -557,11 +542,11 @@ section.about {
   text-transform: capitalize;
   font-family: inherit;
   font-weight: 300;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .signature p {
-  font-size: var(--secondary-font);
+  font-size: 2.3rem;
   text-transform: capitalize;
   font-family: var(--third-font);
   font-weight: 100;
@@ -592,21 +577,19 @@ section.about {
   background-size: cover;
 }
 
-.laurel-container section {
-  padding: 1.5rem 1rem;
+.laurel-logo{
+padding-left: 2rem;
 }
 
-.laurel-container svg {
-  width: 100px;
-  height: 100px;
-}
 
 .laurel-dept {
-  padding-top: 3rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
   padding-inline: 10rem;
+  padding-bottom: 4rem;
+  margin-top: -2rem;
+
 }
 
 .left-laurel {
@@ -657,9 +640,8 @@ section.about {
 }
 
 .laurel-text p {
-  font-size: var(--smaller-font);
+  font-size: 12px;
   font-family: var(--second-font);
-  width: 100%;
 }
 
 .left-laurel-details,
@@ -806,11 +788,11 @@ section.about {
 }
 
 .left-contact .text-contact {
-  width: fit-content;
   font-size: var(--default-font);
   font-family: var(--first-font);
   font-weight: 600;
   text-transform: capitalize;
+  color: var(--white-color);
 }
 
 .left-contact svg {
@@ -818,7 +800,6 @@ section.about {
 }
 
 .left-contact h1 {
-  width: fit-content;
   font: var(--secondary-font) var(--first-font);
   font-weight: 500;
   letter-spacing: 0.15rem;
@@ -830,20 +811,25 @@ section.about {
 .left-contact p {
   width: fit-content;
   font-size: 12px;
-  padding-bottom: 1.5rem;
+}
+
+.left-contact .contact-text{
+  padding-bottom: 1rem;
 }
 
 .left-contact h2 {
   width: fit-content;
   font-size: 20px;
   font-family: var(--first-font);
-  color: #dcca87;
-  padding-bottom: 20px;
+  color: var(--secondary-color);
+  padding-bottom: 1.2rem;
 }
 
 .left-contact .working-hours {
   word-spacing: 0.3rem;
+  padding-bottom: 1rem;
 }
+
 
 .left-contact button {
   background: var(--secondary-color);
@@ -851,6 +837,7 @@ section.about {
   padding: 0.5rem 1.8rem;
   font-weight: 400;
   font: var(--small-font) var(--first-font);
+  margin-top: 1.5rem;
 }
 
 /* right contact section */
@@ -913,12 +900,13 @@ box-shadow: 0 10px 15px  #161616;
   font-family: var(--first-font);
   font-size: var(--default-font);
   letter-spacing: 0.12rem;
-  padding-inline: 4rem;
+  padding-top: 1.3rem;
+  padding-bottom:7px;
 }
 
 .newsletter svg {
   margin: 0 auto;
-  width: 14rem;
+ 
 }
 
 .newsletter h1 {
@@ -928,13 +916,13 @@ box-shadow: 0 10px 15px  #161616;
   color: var(--secondary-color);
   letter-spacing: 0.12rem;
   margin-bottom: 1.5rem;
+  padding-top: 12px;
 }
 
 .newsletter span {
-  font-size: 0.7rem;
+  font-size: 13px;
   text-transform: capitalize;
-  padding-bottom: 0.8rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 /* input section */
@@ -1041,6 +1029,7 @@ footer {
   font-family: var(--first-font);
   text-transform: capitalize;
   padding-bottom: 1rem;
+  color: var(--white-color);
 }
 
 .footer-contact address {
@@ -1096,6 +1085,7 @@ footer {
 /* footer working  */
 
 .footer-working-hours h1 {
+  color: var(--white-color);
   font-size: 1.2rem;
   font-family: var(--first-font);
   text-transform: capitalize;
@@ -1106,8 +1096,9 @@ footer {
 .work-hours {
   display: block;
   word-spacing: 0.12rem;
-  line-height: 1.3;
+  line-height: 1.5;
   font-size: small;
+  padding-bottom: 12px;
 }
 
 .reserve {
