@@ -10,8 +10,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="Assets/css/style.css" />
+
+    <!-- FONT AWESOME LINK  -->
 
     <link
       rel="stylesheet"
@@ -20,6 +22,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <link rel="shortcut icon" href="Assets/img/G.png" type="image/x-icon" />
   </head>
@@ -30,17 +35,17 @@
         <nav>
           <div class="left-navbar">
             <ul>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Blog</li>
-              <li>Landing</li>
+              <li class="nav-link">Home</li>
+              <li class="nav-link">About Us</li>
+              <li class="nav-link">Contact Us</li>
+              <li class="nav-link">Blog</li>
+              <li class="nav-link">Landing</li>
             </ul>
           </div>
           <div class="right-navbar">
             <ul class="login-box">
-              <li>Log In / Registration |</li>
-              <li>Book Table</li>
+              <li class="nav-link">Log In / Registration |</li>
+              <li class="nav-link">Book Table</li>
             </ul>
           </div>
 
@@ -1557,25 +1562,33 @@
       <!-- right gallery -->
       <div class="right-gallery swiper">
         <div class="bg-container swiper-wrapper">
-          <div class="bg">
+          <div class="bg swiper-slide">
             <i class="fa-brands fa-instagram"></i>
             <img class="bg-image" src="Assets/img/bg-1.png" />
           </div>
 
-          <div class="bg">
+          <div class="bg swiper-slide">
             <i class="fa-brands fa-instagram"></i>
             <img class="bg-image" src="Assets/img/bg-2.png" />
           </div>
 
-          <div class="bg">
+          <div class="bg swiper-slide">
             <i class="fa-brands fa-instagram"></i>
             <img class="bg-image" src="Assets/img/bg-3.png" />
           </div>
 
-          <div class="bg">
+          <div class="bg swiper-slide">
             <i class="fa-brands fa-instagram"></i>
             <img class="bg-image" src="Assets/img/bg-4.png" />
           </div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
     </div>

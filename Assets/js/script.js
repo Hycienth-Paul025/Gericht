@@ -23,12 +23,20 @@ navClose = document.getElementById("navClose").addEventListener("click", () => {
   navBar.classList.remove("navActive");
 });
 
+////nav links
+
+const navLinkEl = document.querySelectorAll(".nav-link").forEach((link) =>
+  link.addEventListener("click", () => {
+    navBar.classList.remove("navActive");
+  })
+);
+
 //footer year
 dateEL = document.getElementById("date");
 
 const current = new Date();
 dateEL.textContent = current.getFullYear();
-  
+
 //show top button
 /* 
 topbtnEl = document.querySelector(".top-btn");
@@ -42,8 +50,7 @@ function showTop() {
     topbtnEl.classList.remove("show-btn");
   }
 }
- */ 
-
+ */
 
 // Swiper JS
 /* 
@@ -68,3 +75,33 @@ const swiper = new Swiper(".swiper", {
   },
 });
  */
+
+//// Swiper Functions
+
+const swiper = new Swiper(".right-gallery", {
+  loop: false,
+  grabCursor: true,
+  spaceBetween: 16,
+  slidesPerView: 2,
+
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 2.3,
+    },
+
+    600: {
+      slidesPerView: 1.5,
+    },
+
+    200:{
+slidesPerView: 1.3,
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
