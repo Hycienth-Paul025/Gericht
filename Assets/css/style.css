@@ -1449,10 +1449,29 @@ footer {
     margin-bottom: 2rem;
   }
 
-  .footer-quote {
-    width: 80%;
-    margin: 0 auto;
+  
+  .footer-data > div{
+   text-align: left;
   }
+
+  .footer-quote {
+    width: 50%;
+  }
+
+ .footer-quote .quote{
+  margin: auto 0;
+}
+
+.footer-quote svg{
+  margin-top: 0;
+}
+
+.footer-social{
+  justify-content: left;
+  font-size: 20px;
+}
+
+
 }
 
 @media (max-width: 600px) {
@@ -1492,6 +1511,8 @@ footer {
   .newsletter svg {
     font-size: 7rem;
   }
+
+
 }
 
 @media (max-width: 500px) {
